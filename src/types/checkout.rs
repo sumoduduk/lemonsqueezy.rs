@@ -1,5 +1,3 @@
-use std::collections::HashMap;
-
 use serde::{Deserialize, Serialize};
 use serde_json::Value;
 
@@ -175,7 +173,7 @@ pub struct CreateCheckoutCheckoutData {
     #[serde(skip_serializing_if = "Option::is_none")]
     pub discount_code: Option<String>,
     #[serde(skip_serializing_if = "Option::is_none")]
-    pub custom: Option<HashMap<String, String>>,
+    pub custom: Option<Value>,
     #[serde(skip_serializing_if = "Option::is_none")]
     pub variant_quantities: Option<Vec<i64>>,
 }
